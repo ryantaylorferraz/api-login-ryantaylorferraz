@@ -6,6 +6,6 @@ export class IdValidMiddleware {
         if(!LoginDatabase.some(login => login.id === Number(req.params.id))) {
             return res.status(400).json("login not found")
         }
-        next;
+        next();
     }
 }
